@@ -1,0 +1,8 @@
+name = "TauP"
+uuid = "dd4fbf09-c66a-460f-850c-a6bf3253bb5f"
+authors = ["bvanderbeek <brandon.p.vanderbeek@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Interpolations = "a98d9a8b-a2ab-59e6-89dd-64a1c18fca59"
+JavaCall = "494afd89-becb-516b-aafa-70d2670c0337"
