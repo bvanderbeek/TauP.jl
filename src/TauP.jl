@@ -55,12 +55,13 @@ function __init__()
         taup_jar = split(taup_jar, "TauP/")
         taup_jar = taup_jar[1] * "TauP/TauP-2.6.1/lib/TauP-2.6.1.jar"
         ENV["TAUP_JAR"] = taup_jar
+        println("Using package TauP jar-file: " * ENV["TAUP_JAR"])
+    else
+        println("Using TauP jar-file: " * ENV["TAUP_JAR"])
     end
     # Check file exists
-    if isfile(ENV["TAUP_JAR"])
-        println("Using TauP jar-file: " * ENV["TAUP_JAR"])
-    else
-        error("Could not locate TauP jar-file. Please define the 'TAUP_JAR' environment variable.")
+    if ~isfile(ENV["TAUP_JAR"])
+        error("Could not locate TauP jar-file. Please check the 'TAUP_JAR' environment variable.")
     end
 
     # Setup Java Virtual Machine

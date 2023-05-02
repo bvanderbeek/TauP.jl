@@ -364,8 +364,8 @@ function load_taup_model(filename)
     vp = zeros(N) # Compressional velocity (km/s)
     vs = zeros(N) # Shear velocity (km/s)
     ρ  = zeros(N) # Density (g/cm³)
-    Qp = (1.0e6)*ones(N) # Compressional quality factor
-    Qs = (1.0e6)*ones(N) # Shear quality factor
+    Qp = 1000.0*ones(N) # Compressional quality factor
+    Qs = 1000.0*ones(N) # Shear quality factor
     ibad = falses(N) # Identifies bad data lines (i.e. commented lines)
     # For identifying and storing discontinuities
     rⱼ = -10.0 # Last data depth

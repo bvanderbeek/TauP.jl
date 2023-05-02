@@ -1,3 +1,8 @@
+##### TAUP_PIERCE #####
+# See getPierce methods in Arrival.java
+
+
+
 ##### TAUP_CREATE #####
 
 # Creates a .taup model file from a model stored as a text file following the .nd or .tvel format
