@@ -138,9 +138,9 @@ function taup_path!(PathObj::JavaCall.JavaObject, arc_degrees; tf_correct_distan
             @warn "Mulitple " * phase * " phases predicted for given parameters. Returning first."
         end
     else
-        d = NaN
-        r = NaN
-        t = NaN
+        d = Vector{Float64}(undef,0)
+        r = Vector{Float64}(undef,0)
+        t = Vector{Float64}(undef,0)
         phase = get_taup_phase(PathObj)
         @warn "No " * phase * " phase predicted for given parameters."
     end
