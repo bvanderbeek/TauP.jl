@@ -12,8 +12,3 @@ JavaCall = "494afd89-becb-516b-aafa-70d2670c0337"
 
 [compat]
 julia = "^1"
-CatViews = "^1"
-DSP = "^1"
-DataStructures = "^1"
-Interpolations = "^1"
-JavaCall = "^1"
