@@ -328,8 +328,9 @@ function load_taup_model(filename)
     if isfile(filename)
         # Check file type
         ftype = split(filename,'.')
+        ftype = ftype[end]
         # Open if valid file, otherwise error
-        if ~(ftype == "nd") || ~(ftype == "tvel")
+        if ~(ftype == "nd") && ~(ftype == "tvel")
             error("Unrecognized velocity model file type, '" * ftype * "'. Options are 'nd' or 'tvel'.")
         end
     else

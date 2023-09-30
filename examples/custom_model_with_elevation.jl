@@ -1,6 +1,7 @@
 # Example: Create Model for Elevation Calculations
 # Create a model with a larger Radius from AK135 that can be used to compute
-# travel-times that include elevation.
+# travel-times that include elevation. This approach will not work for surface
+# reflections (but maybe can work-around by adding a model interface).
 delete!(ENV, "TAUP_JAR"); # Use default TauP jar-file
 using TauP
 
