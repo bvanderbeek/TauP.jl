@@ -1,5 +1,5 @@
 # TauP.jl
-A Julia wrapper for the [TauP Toolkit](https://www.seis.sc.edu/taup/), a Java Package for the calculation of seismic travel-times, ray paths, and related quantities through 1D spherical Earth velocity models.
+A Julia wrapper for the [TauP Toolkit](https://www.seis.sc.edu/taup/), a Java Package for the calculation of seismic travel-times, ray paths, and related quantities through 1D spherical Earth velocity models ([GitHub Repo](https://github.com/crotwell/TauP)).
 
 Goal of this project is to provide TauP's functionality inside Julia. At present, this package includes Julia wrappers to `taup_time` (calculation of seismic travel-times, ray parameters, incidence and take-off angles) and `taup_path` (calculation of ray paths and along-ray travel-time information) and supports the placement of receivers below Earth's surface. Additionaly, Julia wrappers to TauP's geodsic methods and functions for reading and writing TauP model files are provided. Wrappers are built using [JavaCall.jl](https://github.com/JuliaInterop/JavaCall.jl).
 
