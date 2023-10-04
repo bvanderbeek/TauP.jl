@@ -9,10 +9,10 @@ Note that an older wrapper package for TauP named [TauPy.jl](https://github.com/
 
 
 # Installation
-Install the package via Julia's package manager:
+The package is part of the Julia General Registetry and can be istalled via the package manager:
 ```julia
 julia> import Pkg
-julia> Pkg.add("https://github.com/bvanderbeek/TauP.jl.git")
+julia> Pkg.add("TauP")
 ```
 
 `TauP.jl` ships with the latest version of TauP that has been tested with the wrappers (currently v2.6.1). By default, this local version of TauP will be used by the wrappers unless the environnment variable `TAUP_JAR` is defined. In this case, `TAUP_JAR` should hold the the path to the desired TauP jar-file. This can be defined from a julia session prior to loading the TauP.jl package as follows:
