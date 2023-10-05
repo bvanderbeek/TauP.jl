@@ -31,6 +31,13 @@ For those familiar with TauP, using the Julia wrappers should be intuitive. For 
 ```julia
 julia> using TauP
 julia> TimeTauP = taup_time(["P","S"], 55.0, 100.0; model = "iasp91", verbose = true)
+Model: iasp91 
+    Depth: 100.0 (km) 
+ Distance: 55.0 (deg) 
+ Phase Name   Travel-time (s)   Ray Param (s/deg)   Takeoff (deg)   Incident (deg)
+ ---------------------------------------------------------------------------------
+ P            560.843           7.202               31.98           22.07         
+ S            1015.837          13.365              33.27           23.82
 ```
 
 The option `verbose = true` enables TauP-like screen output of the results which are stored in the TimeTauP structure.
