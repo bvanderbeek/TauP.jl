@@ -59,7 +59,7 @@ taup_path(["P", "S"], ϕ₀, λ₀, z₀, ϕ₁, λ₁; receiver_depth = z₁, m
 TimeObj = buildTimeObj(model)
 # Compute travel-time (t), ray parameter (p), and incidence (θᵢ) and take-off (θₜ) angles
 # This will set the phase, source depth, and receiver depths fields in the TimeObj
-t,p,θᵢ,θₜ = taup_time!(TimeObj,phase,Δ,z₀,z₁)
+t,p,θₜ,θᵢ = taup_time!(TimeObj,phase,Δ,z₀,z₁)
 # Update some fields in the object and re-perform calculations
 set_taup_phase!(TimeObj,"S")
 # Check phase was indeed reset
