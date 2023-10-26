@@ -1,7 +1,7 @@
 name = "TauP"
 uuid = "dd4fbf09-c66a-460f-850c-a6bf3253bb5f"
 authors = ["bvanderbeek <brandon.p.vanderbeek@gmail.com>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 CatViews = "81a5f4ea-a946-549a-aa7e-2a7f63a27d31"
