@@ -50,7 +50,7 @@ julia> set_taup_source_depth!(TimeObj, 100.0)
 julia> set_taup_receiver_depth!(TimeObj, 0.0)
 julia> t, p, i, j = taup_time!(TimeObj, 55.0) # Call taup_time
 ```
-Here, `TimeObj` is a structure corresponding to TauP's Time object that contains all the relevant information for running `taup_time`. A tuple of arguments is returned with the travel-time `t`, ray parameter `p`, incidence angle `i`, and take-off angle `j`.
+Here, `TimeObj` is a structure corresponding to TauP's Time object that contains all the relevant information for running `taup_time`. A tuple of arguments is returned with the travel-time `t`, ray parameter `p`, take-off angle `i`, and incidence angle `j`.
 
 Note that `TimeObj` is modified in the call to `taup_time!` to contain the relevant travel-time information. However, the same `TimeObj` may still be used on subsequent calculations and its calculation parameters may be updated via various set_* functions.
 
