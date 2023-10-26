@@ -10,7 +10,7 @@
     t, p, i, j = taup_time!(TimeObj::JavaCall.JavaObject, arc_degrees)
 
 Given a TauP Time object `TimeObj` and a source-receiver range `arc_degrees`, returns the
-travel-time `t`, ray parameter `p`, incidence `i` and take-off `j` angle for the
+travel-time `t`, ray parameter `p`, take-off angle `i` and incidence angle `j` for the
 calculation parameters specified in TimeObj.
 
 Note that `TimeObj` is modified to include travel-time information from the TauP calculation.
@@ -46,7 +46,7 @@ function taup_time!(TimeObj::JavaCall.JavaObject, arc_degrees)
         @warn "No " * phase * " phase predicted for given parameters."
     end
 
-    return t, p, θᵢ, θₜ
+    return t, p, θₜ, θᵢ
 end
 """
     t, p, i, j = taup_time!(TimeObj::JavaCall.JavaObject, phase, arc_degrees, source_depth, receiver_depth)
@@ -67,11 +67,11 @@ function taup_time!(TimeObj::JavaCall.JavaObject, phase, arc_degrees, source_dep
     return taup_time!(TimeObj, arc_degrees)
 end
 """
-    t, p, i, j = taup_time!(TimeObj::JavaCall.JavaObject, phase, source_lat, source_lon, source_depth, receiver_lat, receiver_lon, receiver_depth)
+    t, p, i, j, Δ, α = taup_time!(TimeObj::JavaCall.JavaObject, phase, source_lat, source_lon, source_depth, receiver_lat, receiver_lon, receiver_depth)
 
 Syntactically convenient method of `taup_time!(TimeObj, arc_degrees)` that sets the phase, source depth, and
 receiver depth parameters in the `TimeObj` given the source and receiver geographic coordinates and then performs
-the travel-time calculation.
+the travel-time calculation. Returns two additional outputs, the source-to-receiver arc distance (Δ) and azimuth (α).
 
 Note that calculation parameters in `TimeObj` are updated.
 
