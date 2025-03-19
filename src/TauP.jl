@@ -53,11 +53,11 @@ function __init__()
     if ~haskey(ENV,"TAUP_JAR")
         # taup_jar = pathof(@__MODULE__)
         # taup_jar = split(taup_jar, "TauP/")
-        # taup_jar = taup_jar[1] * "TauP/TauP-2.6.1/lib/TauP-2.6.1.jar"
+        # taup_jar = taup_jar[1] * "/TauP-2.7.0-SNAPSHOT5/lib/TauP-2.7.0-SNAPSHOT5.jar"
 
         taup_jar = dirname(abspath(@__FILE__)) # Points to TauP/src
         taup_jar = split(taup_jar, "src")
-        taup_jar = taup_jar[1] * "TauP-2.6.1/lib/TauP-2.6.1.jar"
+        taup_jar = taup_jar[1] * "/TauP-2.7.0-SNAPSHOT5/lib/TauP-2.7.0-SNAPSHOT5.jar"
 
         ENV["TAUP_JAR"] = taup_jar
         println("Using package TauP jar-file: " * ENV["TAUP_JAR"])
