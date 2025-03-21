@@ -5,7 +5,7 @@ Goal of this project is to provide TauP's functionality inside Julia. At present
 
 For examples on how to use TauP.jl, see `tutorial.jl`.
 
-Note that an older wrapper package for TauP named [TauPy.jl](https://github.com/anowacki/TauPy.jl) is available. However, `TauPy` is a Julia wrapper of the tau-p methods implemented within the Python [ObsPy](https://docs.obspy.org/) package. The motivation for this project was to create an updated and pure Julia wrapper for TauP. Those familiar with ObsPy may want to consider `TauPy` depending on their use case.
+Note that another wrapper package for TauP named [TauPy.jl](https://github.com/anowacki/TauPy.jl) is available. Note that `TauPy` is a Julia wrapper of a Python-implemented version of TauP [ObsPy](https://docs.obspy.org/) package. The motivation for this project was to create an updated and pure Julia wrapper for the original TauP Java program. Those familiar with ObsPy may want to consider `TauPy` depending on their use case.
 
 
 # Installation
