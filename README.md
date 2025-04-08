@@ -21,7 +21,7 @@ julia> ENV["TAUP_JAR"] = "path to TauP jar-file"
 ```
 
 ## Attention Non-Windows Users!
-For JavaCall to function properly, please set the environment variable `JULIA_COPY_STACKS = 1` before starting Julia. See [JavaCall documentation](https://github.com/JuliaInterop/JavaCall.jl) for more details.
+For JavaCall to function properly, please set the environment variable `JULIA_COPY_STACKS = 1` before starting Julia. See [JavaCall documentation](https://github.com/JuliaInterop/JavaCall.jl) for more details. However, this may break Julia's multi-threading (e.g., [this issue](https://github.com/JuliaLang/julia/issues/44589))
 
 Additionally, MacOS users must start Julia with the flag `julia --handle-signals=no` to avoid Java-related segmentation faults.
 
